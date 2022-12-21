@@ -18,7 +18,7 @@ public class GeneticAlgorithmController {
     GeneticAlgorithmService geneticAlgorithmService;
 
     @PostMapping(value = "/run")
-    public void roteirizarPayloadSync(@RequestBody List<City> cities) {
+    public void runGeneticAlgorithm(@RequestBody List<City> cities) {
         try {
             geneticAlgorithmService.run(cities);
         } catch (Exception exception) {

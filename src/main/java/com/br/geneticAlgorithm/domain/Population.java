@@ -1,5 +1,7 @@
 package com.br.geneticAlgorithm.domain;
 
+import lombok.Getter;
+
 import java.nio.BufferOverflowException;
 import java.util.Iterator;
 import java.util.PriorityQueue;
@@ -9,7 +11,9 @@ import java.util.function.Consumer;
 public class Population implements Iterable<Chromosome> {
 
     private PriorityQueue<Chromosome> chromosomes;
-    private int maxSize;
+
+    @Getter
+    private final int maxSize;
 
     public Population(int maxSize) {
         this.maxSize = maxSize;

@@ -1,17 +1,19 @@
 package com.br.geneticAlgorithm.domain;
 
 import com.br.geneticAlgorithm.util.DistanceUtil;
-import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
-import java.util.Random;
 
-@AllArgsConstructor
+@NoArgsConstructor
 public class Chromosome implements Comparable<Chromosome> {
 
     private List<Route> routes;
     private int distance = -1;
-    private Random random;
+
+    public Chromosome(List<Route> routes) {
+        this.routes = routes;
+    }
 
     @Override
     public int compareTo(Chromosome chromosome) {
